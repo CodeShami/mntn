@@ -2,7 +2,9 @@
 @import "fonts";
 @import "var";
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,6 +22,16 @@ body {
   background-image: url("../img/BG.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 /* BASE */
@@ -84,6 +96,39 @@ body {
 
     &:hover {
       color: $accent;
+    }
+  }
+
+  &__button {
+    background-color: #fff;
+    width: 42px;
+    height: 5px;
+    border: none;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 5px;
+      background-color: #fff;
+
+      position: absolute;
+      left: 0;
+      top: -10px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 5px;
+      background-color: #fff;
+
+      position: absolute;
+      left: 0;
+      bottom: -10px;
     }
   }
 }
@@ -461,3 +506,5 @@ body {
     }
   }
 }
+
+@import "media.scss";
