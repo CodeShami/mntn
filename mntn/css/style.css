@@ -157,15 +157,25 @@ h6 {
   color: #FBD784;
 }
 
-.nav__button {
-  background-color: #fff;
+.nav__mobile {
+  height: 25px;
+  border: none;
+  padding: 0;
+  background: none;
+  display: none;
+  cursor: pointer;
+}
+
+.nav__mobile-icon {
   width: 42px;
   height: 5px;
+  background-color: #fff;
   border: none;
+  display: block;
   position: relative;
 }
 
-.nav__button::before {
+.nav__mobile-icon::before {
   content: "";
   display: block;
   width: 42px;
@@ -176,7 +186,7 @@ h6 {
   top: -10px;
 }
 
-.nav__button::after {
+.nav__mobile-icon::after {
   content: "";
   display: block;
   width: 42px;
@@ -555,6 +565,10 @@ h6 {
   .nav,
   .account {
     display: none;
+  }
+
+  .nav__mobile {
+    display: block;
   }
 }
 @supports (-webkit-appearance:none){

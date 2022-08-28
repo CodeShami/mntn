@@ -99,12 +99,24 @@ h6 {
     }
   }
 
-  &__button {
-    background-color: #fff;
+  &__mobile {
+    height: 25px;
+    border: none;
+    padding: 0;
+    background: none;
+
+    display: none;
+    cursor: pointer;
+  }
+
+  &__mobile-icon {
     width: 42px;
     height: 5px;
+
+    background-color: #fff;
     border: none;
 
+    display: block;
     position: relative;
 
     &::before {
